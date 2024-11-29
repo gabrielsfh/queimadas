@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="container">
+    <h1 id="ano-display"></h1> 
+    <div class="imagem"></div>
+    <div class="slider">
+      <input type="range" id="ano-slider" value="0" min="0" max="10" step="1" list="ano-lista">
+      <datalist id="ano-lista">    
+      </datalist>
+      <p id="ano-display-small-screen"></p> 
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</div>
+
+</body>
+</html>
