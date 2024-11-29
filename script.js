@@ -8,7 +8,7 @@ function gerarSequencia(base, length, formatter = (value) => value) {
     return Array.from({ length }, (_, i) => formatter(base + i));
   }
   
-const images = gerarSequencia(2013, 11, (ano) => `./imagens/${ano}.gif`); // Carrega as imagens nomeadas de 2013-2023
+const images = gerarSequencia(2013, 11, (ano) => `./imagens/${ano}.png`); // Carrega as imagens nomeadas de 2013-2023
 const anos = gerarSequencia(2013, 11);
   
 // Pré carrega as imagens
