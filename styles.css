@@ -65,13 +65,6 @@ option:last-child {
   margin-right: -2px; 
 }
 
-.ano-display {
-  font-size: 2em;
-  margin: 10px 0;
-  color: #333;
-}
-
-
 #ano-display-small-screen {
   display: none; 
   visibility: hidden; /* Garantir que não ocupe espaço */

@@ -1,6 +1,5 @@
 const range = document.querySelector('input');
 const div = document.querySelector('.imagem');
-const yearDisplay = document.getElementById('ano-display');
 const yearDisplaySmallScreen = document.getElementById('ano-display-small-screen');
 const dataList = document.getElementById('ano-lista');
 
@@ -28,7 +27,6 @@ anos.forEach((year, index) => {
 
 const updateDisplay = (index) => {
       div.innerHTML = `<img src="${images[index]}" alt="imagem" />`;
-      yearDisplay.textContent = `ANO: ${anos[index]}`;
       yearDisplaySmallScreen.textContent = anos[index];
     };
 
