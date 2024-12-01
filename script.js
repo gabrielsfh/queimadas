@@ -12,9 +12,11 @@ const images = gerarSequencia(2013, 11, (ano) => `./imagens/${ano}.png`); // Car
 const anos = gerarSequencia(2013, 11);
 
 // Pré-carrega as imagens
-images.forEach((src) => {
+const imagensPreCarregadas = {};
+images.forEach((src, index) => {
   const img = new Image();
   img.src = src;
+  imagensPreCarregadas[index] = img;
 });
 
 range.max = images.length - 1;
@@ -27,16 +29,17 @@ anos.forEach((ano, index) => {
 });
 
 const updateImagemDisplay = (index) => {
-  const newSrc = images[index];
-  imgElement.src = newSrc;
-  imgElement.onload = () => {
-    div.classList.remove('loading'); // Remove o blur após carregar a imagem por completo
-  };
-  div.classList.add('loading'); // Adiciona o blur
+  const novaImagem = imagensPreCarregadas[index];
+  if (imgElement.src !== novaImagem.src) {
+    div.classList.add('loading'); // Adiciona blur
+    imgElement.src = novaImagem.src;
+    imgElement.onload = () => {
+      div.classList.remove('loading'); // Remove blur após imagem carregar por completo
+    };
+  }
   anoDisplaySmallScreen.textContent = anos[index];
 };
 
-// Inicializa com a primeira imagem e ano
 updateImagemDisplay(0);
 
 range.addEventListener('input', (e) => {
