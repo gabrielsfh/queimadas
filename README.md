@@ -1,6 +1,6 @@
 #  Queimadas de uma unidade de conservação
 
-Aplicação simples usando CSS + JS puro que permite o usuário ver o mapa das queimadas de uma unidade de unidade de conservação entre os anos 2013-2023 usando um slider.
+Aplicação simples usando CSS + JS puro que permite o usuário ver o mapa das queimadas de uma unidade de conservação entre os anos 2013-2023 usando um slider.
 
 ## Imagens:
 <div align="center">
